@@ -20,9 +20,9 @@
         <div class="logo">
             <img src="img/ascend_logo.png" alt="" style="width: 200px;">
         </div>
-        <div class="title">昇腾万里，让智能无所不及</div>
-        <div class="title_en">Ascend Open Source Playground</div>
-        <div class="des">昇腾开源游乐场，欢迎大家一起来玩</div>
+        <div class="title">Ascend Open Source Playground</div>
+        <div class="title_en">只需要你轻松动动手，就能在昇腾游乐场里体验找同款的快乐，感受昇腾硬件运行模型的变化</div>
+        <div class="des">昇腾万里，让智能无所不及</div>
     </div>
     <div class="right">
 
@@ -50,21 +50,21 @@
             <div class="row">
                 <div class="col">
                     <form id="configForm" class="mb-2 border-bottom">
-                        <h4 class="border-bottom pb-1 mb-0">Configuration</h4>
+                        <h4 class="border-bottom pb-1 mb-0">配置区</h4>
                         <div class="config-container pt-2">
                             <div class="form-row">
                                 <div class="form-group col-md-12">
-                                    <label for="inputEndpoint">Search Endpoint</label>
+                                    <label for="inputEndpoint">查询节点</label>
                                     <select class="form-control" id="endpointSelection">
-                                        <option value="http://play-ascend.mindspore.cn:38501/api/search">MindSpore-Lenet-Jina Example
+                                        <option value="http://play-ascend.mindspore.cn:38501/api/search">LeNet手写中文数字样例
                                         </option>
-                                        <option value="http://play-ascend.mindspore.cn:38502/api/search">MindSpore-Resnet-Jina Example
+                                        <option value="http://play-ascend.mindspore.cn:38502/api/search">ResNet 50毒蘑菇样例
                                         </option>
-                                        <option value="custom">Custom Endpoint</option>
+                                        <option value="custom">自定义后端站点地址</option>
                                     </select>
                                     <input type="url" class="form-control mt-2" id="inputEndpoint"
                                            placeholder="ex: http://localhost:65481/api/search" style="display:none;">
-                                    <small id="urlHelp" class="form-text text-muted">use your bacend endpoint </small>
+                                    <small id="urlHelp" class="form-text text-muted">使用Restful API与后端服务器通信 </small>
                                 </div>
                                 <div class="form-group col-md-4">
                                     <label for="inputTimeout">Timeout (ms)</label>
@@ -298,8 +298,8 @@
                         </div>
 
                     </form>
-                    <h4>Example Queries</h4>
-                    <p>You can type or drag and drop the queries below into the jina-box</p>
+                    <h4>查询样例</h4>
+                    <p>您可以本地上传或拖动下方的样例图片到右边的界面中查询</p>
                     <nav>
                         <div class="nav nav-tabs" id="nav-tab" role="tablist">
                             <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab"
