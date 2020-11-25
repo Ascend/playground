@@ -1,0 +1,37 @@
+  #canvas-wraper{
+    margin:0 auto
+  }
+
+  #canvas {
+    border: 2px solid #000000;
+    cursor: crosshair;
+  }
+
+  .cleanBtn {
+    width: 60px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid #000;
+    outline: none;
+  }
+
+  .sendBtn {
+    width: 60px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid #000;
+    outline: none;
+  }
+
+  .btn {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  #img {
+    width: 150px;
+    height: 150px;
+    display: block;
+    margin: 30px left;
+  }
+
