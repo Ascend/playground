@@ -1,0 +1,189 @@
+#browser {
+  background: #f0f0f0;
+  border: 1px solid #cdcdcd;
+  width: 100%;
+  height: 700px;
+  display: block;
+  border-radius: 5px;
+}
+
+#browser-frame {
+  position: relative;
+  height: 92.5%;
+  overflow: hidden;
+  padding: 50px;
+}
+
+.browser-btn {
+  margin: 10px 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 8px;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+#btn-close {
+  background: #c73632;
+  margin-left: 10px;
+  margin-right: 3px;
+}
+
+#btn-min {
+  background: #ee9742;
+  margin-right: 3px;
+}
+
+#btn-max {
+  background: #79b559;
+}
+
+#browser-page-name {
+  font-family: Comfortaa;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  padding: 10px 0;
+  display: inline-block;
+}
+
+.jina-floater-container {
+  position: absolute !important;
+}
+
+.jina-floater-box {
+  position: absolute !important;
+}
+
+.img-thumbnail {
+  width: 30%;
+}
+
+.img-thumbnail.gif {
+  width: 70%;
+}
+
+.tab-pane {
+  margin: 10px;
+}
+
+pre,
+code {
+  white-space: pre-line;
+}
+
+.config-container {
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 0.5em;
+  height: 400px;
+}
+
+#typewriterPlaceholders {
+  padding-left: 0.5em;
+}
+
+#typewriterPlaceholders li {
+  list-style: none;
+  margin-bottom: 0.25em;
+}
+
+.placeholder-remove-icon {
+  font-size: 0.75em;
+  margin-right: 1em;
+  cursor: pointer;
+}
+
+.form-control::placeholder {
+  opacity: 0.5;
+}
+
+/* 新增样式 */
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  background: url('./img/banner.png') no-repeat;
+  background-size: 100% 100%;
+}
+.header .left {
+  flex: 6;
+}
+
+.header .left .logo {
+}
+
+.header .left .title {
+  font-size: 20px;
+  color: #000;
+}
+
+.header .left .title_en {
+  font-size: 20px;
+  color: #c73632;
+}
+
+.header .left .des {
+}
+
+.header .right {
+  flex: 4;
+}
+
+.right-line {
+  border-right: 1px solid #ccc;
+}
+
+.row {
+  margin: 0;
+}
+.margin-bottom-50 {
+  margin-bottom: 50px;
+}
+.container {
+  padding: 0;
+}
+.tab-container {
+    background: url("./img/tab_bg.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.tab-item {
+  cursor: pointer;
+}
+
+.tab-active {
+  border-bottom: 2px solid red;
+  font-weight: 700;
+}
+body {
+  background-color: #f0f4f8;
+}
+
+.architecture {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    font-weight: 700;
+    padding: 8px 0;
+}
+
+.architecture::after{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 50%;
+    height: 2px;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    background-color:  #be847e;
+}
+
+
+.footer {
+    background: url("./img/footer.png") no-repeat;
+    background-size: 100% 100%;
+    color: #fff;
+}
