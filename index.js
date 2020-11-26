@@ -389,3 +389,28 @@ $('.viewPartition').on('click', () => {
   $(showBoxIframe).css('display', 'block');
   showBoxIframe.src = 'http://play-ascend.mindspore.cn:38600/partitions'
 })
+
+$('#right_2_div>span').on('click', () => {
+	$('#right_introduction').text("CANN(Compute Architecture for Neural Networks)是华为全栈全场景AI解决方案中的芯片使能层，位于芯片层之上，AI框架层之下，它提供了高效算子库和高度自动化的神经网络算子开发工具，让开发者能够方便地在昇腾芯片上开发高性能的自定义算子。");	
+})
+$('#right_3_div').on('click', () => {
+	$('#right_introduction').text("AscendCL昇腾统一编程语言（Ascend Computing Language）统一API适配昇腾系列硬件，实现软硬件解耦。并且通过第三方框架调用AscendCL接口，使用昇腾AI处理器的计算能力，拓展昇腾芯片多样化计算能力，让开发者受益。");	
+})
+$('#right_4_div').on('click', () => {
+	$('#right_introduction').text("Graph Engine昇腾图优化引擎（简称GE），位于AI框架和昇腾驱动层之间，起到承接作用。GE针对昇腾芯片的硬件结构特点，做了特定的优化工作，并且提供了构图接口集合，用户可以调用这些接口构建网络模型，设置模型所包含的图、图内的算子、以及模型和算子的属性等，以此来充分发挥出昇腾芯片的强大算力。");	
+})
+$('#right_5_div').on('click', () => {
+	$('#right_introduction').text("Runtime运行管理器是神经网络任务流进入硬件资源的入口，为神经网络的任务分配提供了资源管理通道。昇腾芯片通过Runtime而执行在应用程序的进程空间中，为应用程序提供了存储管理、设备管理、执行流管理、事件管理、核函数执行等功能。");	
+})
+$('#right_6_div').on('click', () => {
+	$('#right_introduction').text("DVPP数字视觉预处理是编解码和图像转换模块。当视频或图像数据进入昇腾芯片进行计算之前，由于达芬奇架构对输入数据有固定的格式要求，如果数据未满足架构规定的输入格式、分辨率等要求，就需要调用DVPP进行格式的转换，之后才可以进行后续的神经网络计算步骤。");	
+})
+$('#right_7_div').on('click', () => {
+	$('#right_introduction').text("HCCL华为集合通信库 (Huawei Collective Communication Library) 实现昇腾芯片的collective communication通信库。并在集群训练中提供多机多卡间集合通信功能、梯度聚合功能和hcom集群通信算子，在分布式训练中不同昇腾AI处理器之间提供高效的数据传输能力。");	
+})
+$('#right_8_div').on('click', () => {
+	$('#right_introduction').text("Driver昇腾驱动层与Runtime共同组成软硬件之间的连接通道。在执行时，Driver任务调度器对硬件进行任务的驱动和供给，为昇腾芯片提供具体的目标任务，与Runtime一起完成任务调度流程，并将输出数据回送给Runtime，充当了一个任务输送分发和数据回传的通道。");	
+})
+$('#right_9_div').on('click', () => {
+	$('#right_introduction').text("TBE编程语言为基于昇腾芯片的神经网络提供算子开发能力，同时也提供了封装调用能力。其中有一个神经网络TBE标准算子库，开发者可以直接利用标准算子库中的算子实现高性能的神经网络计算。除此之外，TBE算子的融合能力，也为神经网络的优化提供了另外一条技术路径。");	
+})

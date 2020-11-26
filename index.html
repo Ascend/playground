@@ -37,6 +37,10 @@
                 <img src="img/tab_center.png" alt="" srcset="" style="width: 40px;height: 40px;">
             </div>
             <div class="tab-item" style="padding: 10px;">昇腾助力HPC</div>
+        <div>
+            <img src="img/tab_center.png" alt="" srcset="" style="width: 40px;height: 40px;">
+        </div>
+        <div class="tab-item" style="padding: 10px;">昇腾开源小课堂</div>
         </div>
         <div class="row tab-contents tab-1-content" style="margin-top: 20px;">
             <div class="col-2">
@@ -330,9 +334,148 @@
                 <div class="architecture">Architecture</div>
                 <div class="row">
                     <img src="img/ascend_slurm.png" alt="" srcset="" style="width: 100%;">
+            </div>
+        </div>
+    </div>
+    <div class="row tab-contents tab-5-content" style="display: none;margin-top: 20px;">
+        <div class="col-8 community-left">
+            <div class="community-left-title">
+                昇腾社区指引
+            </div>
+            <nav>
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <a class="nav-item nav-link active" data-toggle="tab"
+                       href="#community-vision" role="tab" 
+                       aria-selected="true">社区愿景</a>
+                    <a class="nav-item nav-link"  data-toggle="tab" href="#project-entrance"
+                       role="tab" aria-selected="false">项目入口</a>
+                    <a class="nav-item nav-link"  data-toggle="tab" href="#community-contribution"
+                       role="tab" aria-selected="false">社区贡献</a>
+                    <a class="nav-item nav-link"  data-toggle="tab" href="#join-us"
+                       role="tab" aria-selected="false">加入我们</a>                    
+                </div>
+            </nav>
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="community-vision" role="tabpanel">
+                    <div class="row">
+                        <div class="col-4 community-vision-item">
+                            <img class="community-vision-img" src="./img/smallClass/vision_1.png" alt="">
+                            <img class="community-vision-line" src="./img/tab_line.png" alt="">
+                            <p class="community-vision-content">构建开发者之间的直接交流渠道，加速问题闭环</p>
+                        </div>
+                        <div class="col-4 community-vision-item">
+                            <img class="community-vision-img" src="./img/smallClass/vision_2.png" alt="">
+                            <img class="community-vision-line" src="./img/tab_line.png" alt="">
+                            <p class="community-vision-content">降低用户使能昇腾芯片的门槛</p>
+                        </div>
+                        <div class="col-4 community-vision-item">
+                            <img class="community-vision-img" src="./img/smallClass/vision_2.png" alt="">
+                            <img class="community-vision-line" src="./img/tab_line.png" alt="">
+                            <p class="community-vision-content">支持用户快速开展自定义算子算法创新</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade show" id="project-entrance" role="tabpanel">
+                    <div class="row">
+                        <p class="project-entrance-top">昇腾开源社区在码云的Ascend组织下（ https://gitee.com/ascend ），使用场景和项目入口下表所示，您可以根据实际场景，在对应的项目中拉取代码编译，修改，提交Issue和PR等。</p>
+                        <div class="table-div">
+                            <div class="vertical-line fiist-line"></div>
+                            <div class="vertical-line second-line"></div>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th style="width:40%">应用场景</th>
+                                        <th style="width:25%">公开项目</th>
+                                        <th style="width:35%">地址</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>您准备或已经使用了ModelZoo中的模型或者脚本，或想要向ModelZoo中贡献您的脚本。</br>各类基于昇腾的模型大赛的技术支撑入口</td>
+                                        <td>modelzoo</td>
+                                        <td>https://gitee.com/ascend/modelzoo</td>
+                                    </tr>
+                                    <tr>
+                                        <td>您准备将模型脚本迁移到MindSpore框架，并运行到昇腾AI处理器。</td>
+                                        <td>mindspore</td>
+                                        <td>https://gitee.com/mindspore/mindspore</td>
+                                    </tr>
+                                    <tr>
+                                        <td>您准备将TensorFlow框架的模型脚本运行到昇腾AI处理器。</td>
+                                        <td>Tensorflow adapter for Ascend</td>
+                                        <td>https://gitee.com/ascend/tensorflow</td>
+                                    </tr>
+                                    <tr>
+                                        <td>您准备使用第三方框架模型进行模型转换和推理执行，或者贡献其他框架的对接能力。</td>
+                                        <td>parser</td>
+                                        <td>https://gitee.com/ascend/parser</td>
+                                    </tr>
+                                    <tr>
+                                        <td>您准备向昇腾Graph Engine贡献代码，或咨询Graph Engine相关问题</td>
+                                        <td>graphengine</td>
+                                        <td>https://gitee.com/mindspore/graphengine</td>
+                                    </tr>
+                                    <tr>
+                                        <td>您准备使用昇腾提供的系列samples，或贡献samples。</td>
+                                        <td>Ascend Samples</td>
+                                        <td>https://gitee.com/ascend/samples</td>
+                                    </tr>
+                                </tbody>
+                            </table> 
+                        </div>                                               
+                        <div class="project-entrance-bottom">
+                            <span class="project-entrance-bottom-tips">Tips: </span>
+                            <span class="project-entrance-bottom-tip">若您提issue时无法识别对应的入口项目，可以直接在modelzoo项目中提交Issue，我们会及时处理。</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade show" id="community-contribution" role="tabpanel">
+                    <div class="row">
+                        <div class="col-3 community-contribution">
+                            <p class="community-contribution-item community-contribution-item-red">通过Issue建立直达Commiter的交流渠道，快速闭环问题和需求。</p> 
+                        </div>
+                        <div class="col-3 community-contribution">
+                            <p class="community-contribution-item community-contribution-item-gray">用户基于开放Project自主修改、编译、升级，快速闭环问题。</p>
+                        </div>
+                        <div class="col-3 community-contribution">
+                            <p class="community-contribution-item community-contribution-item-red">参加社区活动，回复Issue，获取激励。</p>
+                        </div>
+                        <div class="col-3 community-contribution">
+                            <p class="community-contribution-item community-contribution-item-gray">快速获得公开项目的开发版本。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade show" id="join-us" role="tabpanel">
+                    <div>
+                        <img class="join-us" src="./img/smallClass/join_us.png" alt="">
+                    </div>
                 </div>
             </div>
         </div>
+        <div class="col-4">        
+            <div class="architecture">昇腾软件栈</div>    
+            <div class="right-content">
+               <div id="right_1_div">AI框架</div>
+                <div id="right_2_div">
+                    <div id="right_3_div">AscendCL</br>昇腾统一编程语言</div>
+                    <div id="right_4_div">Graph Engine</br>昇腾图优化引擎</div>
+                    <div id="right_5_div">Runtime运行管理器</div>
+                    <div id="right_6_div">DVPP数字视觉预处理</div>
+                    <div id="right_7_div">CANN Lib</br>神经网络算子库</br>HCCL</br>华为集合通信库</div>
+                    <div id="right_8_div">Driver</br>昇腾驱动层</div>
+                    <div id="right_9_div">
+                        <span>开发体系</span>
+                        <p id="right_9_div_1">编程语言</br>TBE</p>
+                        <p id="right_9_div_2">编译及调试工具</p>
+                        <p id="right_9_div_3">编程模型</p>
+                    </div>
+                    <span>CANN</span>
+                </div>
+                <div id="right_10_div">操作系统</br>昇腾系列硬件</div>               
+            </div>  
+            <div id="right_introduction">CANN(Compute Architecture for Neural Networks)是华为全栈全场景AI解决方案中的芯片使能层，位于芯片层之上，AI框架层之下，它提供了高效算子库和高度自动化的神经网络算子开发工具，让开发者能够方便地在昇腾芯片上开发高性能的自定义算子。</div>
+        </div>
+    </div>
 
     </div>
 
