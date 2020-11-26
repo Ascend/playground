@@ -77,7 +77,7 @@ code {
   overflow-y: auto;
   overflow-x: hidden;
   padding-right: 0.5em;
-  height: 400px;
+  height: 270px;
 }
 
 #typewriterPlaceholders {
@@ -189,11 +189,12 @@ body {
     background-size: 100% 100%;
     color: #fff;
 }
-#showBoxIframe{
-  background-color: #000;
-  color: #fff;
+#showBoxIframeBefore{
+  margin-bottom:  1rem;
 }
-
+#showBoxIframe{
+  background-color: #cfd3e6;
+}
 .tab-5-content{
   font-size: 0.875rem;
 }
@@ -243,7 +244,7 @@ a.nav-link{
 .vertical-line{
   position: absolute;
   width: 5px;
-  height: 37.5rem;
+  height: 44.5rem;
   background: url("./img/smallClass/table_1.png");
   background-repeat: no-repeat;
   background-size: contain;
@@ -298,6 +299,31 @@ a.nav-link{
 .join-us{
   width: 100%;
 }
+.join-us-content{
+  padding: 0rem;
+}
+.part1{
+  background: url("./img/smallClass/join_1.png");
+  position: relative;
+  margin-top: 3rem;
+}
+.part2{
+  background: url("./img/smallClass/join_2.png");
+  position: relative;
+  margin: 3rem 0;
+}
+.part3{
+  background: url("./img/smallClass/join_3.png");
+  position: relative;
+}
+.part1 div, .part2 div, .part3 div{
+  text-align: center;
+}
+.join-us-title{
+  font-size: 1.5rem;
+  color: #c73632;
+  margin: 1rem 0;
+}
 .right-content{
   color: #fff;
   font-weight: bold;
@@ -318,8 +344,7 @@ a.nav-link{
   width: 100%;
   height: 23.75rem;  
   position: relative;
-  padding-top: 20rem;
-  cursor: pointer;
+  padding-top: 20rem;  
 }
 #right_3_div{
   background: url("./img/smallClass/right_3.png");
@@ -330,6 +355,30 @@ a.nav-link{
   top: 0.6rem;
   line-height: 2rem;
   cursor: pointer;
+}
+#right_3_div:hover{
+  color: #c73632;
+}
+#right_4_div:hover{
+  color: #c73632;
+}
+#right_5_div:hover{
+  color: #c73632;
+}
+#right_6_div:hover{
+  color: #c73632;
+}
+#right_7_div:hover{
+  color: #c73632;
+}
+#right_8_div:hover{
+  color: #c73632;
+}
+#right_9_div_1:hover{
+  color: #c73632;
+}
+#right_2_div>span:hover{
+  color: #c73632;
 }
 #right_4_div{
   background: url("./img/smallClass/right_4.png");
@@ -396,8 +445,7 @@ a.nav-link{
   top: 0.6rem;
   right: 0;
   line-height: 2rem;
-  padding-top: 2rem;
-  cursor: pointer;
+  padding-top: 2rem;  
 }
 #right_9_div_1,#right_9_div_2,#right_9_div_3{
   width: 5rem;
@@ -407,6 +455,9 @@ a.nav-link{
   line-height: 1rem;
   font-size: 0.8rem;
   padding-top: 0.5rem;  
+}
+#right_9_div_1{
+  cursor: pointer;
 }
 #right_2_div>span{
   font-size: 2rem;
@@ -423,4 +474,7 @@ a.nav-link{
 }
 #right_introduction{
   margin-bottom: 3rem;
+}
+#canvas-wraper{
+  text-align: center;
 }

@@ -40,8 +40,8 @@ function pos(event) {
     x = event.touches[0].pageX;
     y = event.touches[0].pageY;
   } else {
-    x = event.offsetX + event.target.offsetLeft;
-    y = event.offsetY + event.target.offsetTop;
+    x = event.offsetX;
+    y = event.offsetY;
   }
   return { x: x, y: y };
 }
@@ -77,7 +77,6 @@ function send() {
       let images = resolveResponse(response).slice(0, 3);
       let html = images
         .map((imgObj) => {
-          console.log(imgObj);
           return `<img src="${imgObj.data}" style="width:150px;height:150px;margin:5px;"/>`;
         })
         .join("");

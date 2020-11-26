@@ -51,7 +51,7 @@
                     <img src="img/tab_1_left.png" alt="" style="width: 100%;">
                 </div>
             </div>
-            <div class="col-10" style="background-color: #fff;">
+            <div class="col-10" style="background-color: #fff;margin-bottom: 1rem;padding-top: 1rem;">
                 <div class="row">
                     <div class="col">
                         <form id="configForm" class="mb-2 border-bottom">
@@ -318,11 +318,11 @@
         </div>
 
         <div class="row tab-contents tab-3-content" style="display: none;margin-top: 20px;">
-            <div class="col-10" style="padding: 0;">
+            <div class="col-10" style="padding: 0;background-color: #fff;padding: 1.2rem;margin-bottom: 1rem;">
                 <div id="showBoxIframeBefore" class="row">
                     想了解Ascend机器运行信息，可点击下方按钮查询
                 </div>
-                <iframe id="showBoxIframe" style="display: none;" src="" frameborder="0" width="100%" height="100%">
+                <iframe id="showBoxIframe" style="border-radius:0.25rem;display: none;min-height: 12rem;" src="" frameborder="0" width="100%" height="auto">
                 </iframe>
                 <div class="btn-group" role="group" aria-label="Basic example">
                     <button type="button" class="btn btn-secondary viewCluster">查看集群</button>
@@ -420,6 +420,11 @@
                                         <td>Ascend Samples</td>
                                         <td>https://gitee.com/ascend/samples</td>
                                     </tr>
+                                    <tr>
+                                        <td>您准备或已经在HPC等大规模计算场景使用了昇腾AI集群，希望简化集群资源管理以及任务调度的相关工作。</td>
+                                        <td>Slurm plugin for Ascend</td>
+                                        <td>https://gitee.com/ascend/slurm-atlas-plugin</td>
+                                    </tr>
                                 </tbody>
                             </table> 
                         </div>                                               
@@ -446,8 +451,8 @@
                     </div>
                 </div>
                 <div class="tab-pane fade show" id="join-us" role="tabpanel">
-                    <div>
-                        <img class="join-us" src="./img/smallClass/join_us.png" alt="">
+                    <div class="join-us-content">
+                        <img class="join-us" src="./img/smallClass/join_us.png" alt="">                        
                     </div>
                 </div>
             </div>

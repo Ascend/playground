@@ -186,6 +186,9 @@ endpointSelection.addEventListener("change", function (e) {
   let optionValue = e.target.value;
 
   if (optionValue === "custom") {
+	$("#queryExample").css("display", "none");
+	$("#browser").css("display", "block");
+	$("#canvas-wraper").css("display", "none");
     const url = inputEndpoint.value;
     inputEndpoint.style.display = "block";
     window.JinaBox.updateSettings({ url });
@@ -373,21 +376,19 @@ function renderExampleImages(params) {
 renderExampleImages()
 
 const showBoxIframe = document.getElementById('showBoxIframe');
-const showBoxIframeBefore = document.getElementById('showBoxIframeBefore');
+const showBoxIframeBefore = document.getElementById('showBoxIframeBefore');  
 $('.viewCluster').on('click', () => {
-  $(showBoxIframeBefore).css('display', 'none');
   $(showBoxIframe).css('display', 'block');
-  showBoxIframe.src = 'http://play-ascend.mindspore.cn:38600/cluster'
+  showBoxIframe.src = 'http://play-ascend.mindspore.cn:38600/cluster';  
 })
 $('.viewNode').on('click', () => {
-  $(showBoxIframeBefore).css('display', 'none');
   $(showBoxIframe).css('display', 'block');
-  showBoxIframe.src = 'http://play-ascend.mindspore.cn:38600/nodes'
+  showBoxIframe.src = 'http://play-ascend.mindspore.cn:38600/nodes';
 })
+
 $('.viewPartition').on('click', () => {
-  $(showBoxIframeBefore).css('display', 'none');
   $(showBoxIframe).css('display', 'block');
-  showBoxIframe.src = 'http://play-ascend.mindspore.cn:38600/partitions'
+  showBoxIframe.src = 'http://play-ascend.mindspore.cn:38600/partitions';  
 })
 
 $('#right_2_div>span').on('click', () => {
@@ -411,6 +412,6 @@ $('#right_7_div').on('click', () => {
 $('#right_8_div').on('click', () => {
 	$('#right_introduction').text("Driver昇腾驱动层与Runtime共同组成软硬件之间的连接通道。在执行时，Driver任务调度器对硬件进行任务的驱动和供给，为昇腾芯片提供具体的目标任务，与Runtime一起完成任务调度流程，并将输出数据回送给Runtime，充当了一个任务输送分发和数据回传的通道。");	
 })
-$('#right_9_div').on('click', () => {
+$('#right_9_div_1').on('click', () => {
 	$('#right_introduction').text("TBE编程语言为基于昇腾芯片的神经网络提供算子开发能力，同时也提供了封装调用能力。其中有一个神经网络TBE标准算子库，开发者可以直接利用标准算子库中的算子实现高性能的神经网络计算。除此之外，TBE算子的融合能力，也为神经网络的优化提供了另外一条技术路径。");	
 })
