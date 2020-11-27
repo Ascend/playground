@@ -304,17 +304,37 @@ a.nav-link{
 }
 .part1{
   background: url("./img/smallClass/join_1.png");
+  width: 100%;
+  height: 7rem;
+  background-size: 100% 100%;
   position: relative;
   margin-top: 3rem;
+  padding-top: 1px;
 }
 .part2{
   background: url("./img/smallClass/join_2.png");
+  width: 100%;
+  height: 20rem;
+  background-size: 100% 100%;
   position: relative;
+  margin-top: 3rem;
+  padding-top: 1px;
   margin: 3rem 0;
+  text-align: center;
+}
+.part2 img{
+  width: 10rem;
+  height: 10rem;
+  margin: 1.5rem 0 0.5rem 0;
 }
 .part3{
   background: url("./img/smallClass/join_3.png");
+  width: 100%;
+  height: 8rem;
+  background-size: 100% 100%;
   position: relative;
+  margin-top: 3rem;
+  padding-top: 1rem;
 }
 .part1 div, .part2 div, .part3 div{
   text-align: center;
@@ -322,7 +342,78 @@ a.nav-link{
 .join-us-title{
   font-size: 1.5rem;
   color: #c73632;
-  margin: 1rem 0;
+  margin: 0.5rem 0;
+}
+.link-round{
+  position: absolute;
+  width: 1.3rem;
+  height: 1.3rem;
+  background: url(./img/smallClass/join_5.png);
+  background-repeat: round;
+}
+.link-round1{
+  top: 1rem;
+  left: 7rem;
+}
+.link-round2{
+  top: 1rem;
+  right: 7rem;
+}
+.link-round3{
+  bottom: 1rem;
+  left: 1.5rem;
+}
+.link-round4{
+  bottom: 1rem;
+  right: 1.5rem;
+}
+.link-round5{
+  top: 1rem;
+  left: 1.5rem;
+}
+.link-round6{
+  top: 1rem;
+  right: 1.5rem;
+}
+.link-round7{
+  bottom: 1rem;
+  left: 1.5rem;
+}
+.link-round8{
+  bottom: 1rem;
+  right: 1.5rem;
+}
+.link-round9{
+  top: 1rem;
+  left: 1.5rem;
+}
+.link-round10{
+  top: 1rem;
+  right: 1.5rem;
+}
+.link-line{
+  position: absolute;
+  z-index: 100;
+  width: 5px;
+  height: 6.5rem;
+  background: url(./img/smallClass/join_6.png);
+  background-repeat: round;
+}
+.link-line1{
+  top: -4.7rem;
+  left: 2rem;
+}
+.link-line2{
+  top: -4.7rem;
+  right: 2rem;
+}
+.link-line3{
+  bottom: -4.7rem;
+  left: 2rem;
+}
+.link-line4{
+  bottom: -4.7rem;
+  right: 2rem;
 }
 .right-content{
   color: #fff;
