@@ -189,6 +189,15 @@ body {
     background-size: 100% 100%;
     color: #fff;
 }
+
+.footer a {
+  color: #ffffff;
+}
+
+.footer a:hover {
+  color: #0000ff;
+}
+
 #showBoxIframeBefore{
   margin-bottom:  1rem;
 }
@@ -255,6 +264,7 @@ a.nav-link{
 .second-line{
   left: 57%;
 }
+
 #project-entrance tr{
   background: url("./img/smallClass/table_2.png");
   background-position: bottom;
@@ -569,3 +579,4 @@ a.nav-link{
 #canvas-wraper{
   text-align: center;
 }
+
