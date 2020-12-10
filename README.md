@@ -1,6 +1,6 @@
 # playground
 
-Ascend playground.
+Ascend open source playground.
 
 ## License
 
