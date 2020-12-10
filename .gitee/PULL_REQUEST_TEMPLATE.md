@@ -2,7 +2,7 @@
 
 1) If this is your first time, please read our contributor guidelines: https://gitee.com/mindspore/mindspore/blob/master/CONTRIBUTING.md
 
-2) If you want to contribute your code but don't know who will review and merge, please add label `mindspore-assistant` to the pull request, we will find and do it as soon as possible.
+2) If you want to contribute your code but don't know who will review and merge, please add label `ascend-assistant` to the pull request, we will find and do it as soon as possible.
 -->
 
 **What type of PR is this?**
