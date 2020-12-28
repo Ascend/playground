@@ -9,309 +9,308 @@
     <meta http-equiv="Access-Control-Allow-Origin" content="*">
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="canvas.css">
     <title>Ascend Playground</title>
 </head>
 <body>
 
-    <div class="container header" style="padding: 50px;">
-        <div class="left">
-            <div class="logo">
-                <img src="img/ascend_logo.png" alt="" style="width: 200px;">
-            </div>
-            <div class="title">Ascend Open Source Playground</div>
-            <div class="title_en">只需要你轻松动动手，就能在昇腾游乐场里体验找同款的快乐，感受昇腾硬件运行模型的变化</div>
-            <div class="des">昇腾万里，让智能无所不及</div>
+<div class="container header" style="padding: 50px;">
+    <div class="left">
+        <div class="logo">
+            <img src="img/ascend_logo.png" alt="" style="width: 200px;">
         </div>
-        <div class="right">
-
-        </div>
+        <div class="title">Ascend Open Source Playground</div>
+        <div class="title_en">只需要你轻松动动手，就能在昇腾游乐场里体验找同款的快乐，感受昇腾硬件运行模型的变化</div>
+        <div class="des">昇腾万里，让智能无所不及</div>
     </div>
+    <div class="right">
 
-    <div class="container">
-        <div class="row justify-content-center tab-container align-items-center">
-            <div class="tab-item tab-active" style="padding: 10px;">昇腾找同款</div>
-            <div>
-                <img src="img/tab_center.png" alt="" srcset="" style="width: 40px;height: 40px;">
-            </div>
-            <div class="tab-item" style="padding: 10px;">昇腾助力HPC</div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row justify-content-center tab-container align-items-center">
+        <div class="tab-item tab-active" style="padding: 10px;">昇腾找同款</div>
+        <div>
+            <img src="img/tab_center.png" alt="" srcset="" style="width: 40px;height: 40px;">
+        </div>
+        <div class="tab-item" style="padding: 10px;">昇腾助力HPC</div>
         <div>
             <img src="img/tab_center.png" alt="" srcset="" style="width: 40px;height: 40px;">
         </div>
         <div class="tab-item" style="padding: 10px;">昇腾开源小课堂</div>
-        </div>
-        <div class="row tab-contents tab-1-content" style="margin-top: 20px;">
-            <div class="col-2">
-                <div class="architecture" style="margin-bottom: 20px;">
-                    Architecture
-                </div>
-                <div class="row">
-                    <img src="img/tab_1_left.png" alt="" style="width: 100%;">
-                </div>
+    </div>
+    <div class="row tab-contents tab-1-content" style="margin-top: 20px;">
+        <div class="col-2">
+            <div class="architecture" style="margin-bottom: 20px;">
+                Architecture
             </div>
-            <div class="col-10" style="background-color: #fff;margin-bottom: 1rem;padding-top: 1rem;">
-                <div class="row">
-                    <div class="col">
-                        <form id="configForm" class="mb-2 border-bottom">
-                            <h4 class="border-bottom pb-1 mb-0">配置区</h4>
-                            <div class="config-container pt-2">
-                                <div class="form-row">
-                                    <div class="form-group col-md-12">
-                                        <label for="inputEndpoint">查询节点</label>
-                                        <select class="form-control" id="endpointSelection">
-                                            <option value="option1">LeNet手写中文数字样例
-                                            </option>
-                                            <option value="option2">ResNet50毒蘑菇样例
-                                            </option>
-                                            <option value="custom">自定义后端站点地址</option>
-                                        </select>
-                                        <input type="url" class="form-control mt-2" id="inputEndpoint"
-                                            placeholder="ex: http://localhost:65481/api/search" style="display:none;">
-                                        <small id="urlHelp" class="form-text text-muted">使用Restful API与后端服务器通信 </small>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label>Content Type</label>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="acceptText" checked>
-                                        <label class="form-check-label" for="acceptText">
-                                            Text
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="acceptImage" checked>
-                                        <label class="form-check-label" for="acceptImage">
-                                            Image
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="acceptAudio" checked>
-                                        <label class="form-check-label" for="acceptAudio">
-                                            Audio
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="acceptVideo" checked>
-                                        <label class="form-check-label" for="acceptVideo">
-                                            Video
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label>Components</label>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="showSearch" checked>
-                                        <label class="form-check-label" for="showSearch">
-                                            Show searchbar
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="showFloater" checked>
-                                        <label class="form-check-label" for="showFloater">
-                                            Show floater
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label>Floater Style</label>
-                                    <div class="form-check">
-                                        <input class="form-check-input jina-results-select" type="radio"
-                                            name="floaterStyleRadios" id="floaterStandard" value="standard" checked>
-                                        <label class="form-check-label" for="floaterStandard">
-                                            Standard
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input jina-results-select" type="radio"
-                                            name="floaterStyleRadios" id="floaterChatBot" value="chatBot">
-                                        <label class="form-check-label" for="floaterChatBot">
-                                            Chat Bot
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label>Expanding Dropzone</label>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="showSearchbarDropzone"
-                                            checked>
-                                        <label class="form-check-label" for="showSearchbarDropzone">
-                                            Searchbar
-                                        </label>
-                                    </div>
-
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="showFloaterDropzone"
-                                            checked>
-                                        <label class="form-check-label" for="showFloaterDropzone">
-                                            Floater
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label>Searchbar Results</label>
-                                    <div class="form-check">
-                                        <input class="form-check-input jina-results-select" type="radio"
-                                            name="resultsRadios" id="resultsDropdown" value="dropdown" checked>
-                                        <label class="form-check-label" for="resultsDropdown">
-                                            Show in Dropdown
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input jina-results-select" type="radio"
-                                            name="resultsRadios" id="resultsComponent" value="resultsArea">
-                                        <label class="form-check-label" for="resultsComponent">
-                                            Show in Results Component
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label>Color Theme</label>
-                                    <div class="form-check">
-                                        <input class="form-check-input jina-theme-select" type="radio"
-                                            name="exampleRadios" id="colorDefault" value="default" checked>
-                                        <label class="form-check-label" for="colorDefault">
-                                            Default
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input jina-theme-select" type="radio"
-                                            name="exampleRadios" id="colorPersian" value="persian">
-                                        <label class="form-check-label" for="colorPersian">
-                                            Persian
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input jina-theme-select" type="radio"
-                                            name="exampleRadios" id="colorPompelmo" value="pompelmo">
-                                        <label class="form-check-label" for="colorPompelmo">
-                                            Pompelmo
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input jina-theme-select" type="radio"
-                                            name="exampleRadios" id="colorHoneybee" value="honeybee">
-                                        <label class="form-check-label" for="colorHoneybee">
-                                            Honeybee
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label>Typewriter Effect</label>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="useTypewriter">
-                                        <label class="form-check-label" for="useTypewriter">
-                                            Enable Typewriter Effect
-                                        </label>
-                                    </div>
-
+            <div class="row">
+                <img src="img/tab_1_left.png" alt="" style="width: 100%;">
+            </div>
+        </div>
+        <div class="col-10" style="background-color: #fff;margin-bottom: 1rem;padding-top: 1rem;">
+            <div class="row">
+                <div class="col">
+                    <form id="configForm" class="mb-2 border-bottom">
+                        <h4 class="border-bottom pb-1 mb-0">配置区</h4>
+                        <div class="config-container pt-2">
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <label for="inputEndpoint">查询节点</label>
+                                    <select class="form-control" id="endpointSelection">
+                                        <option value="option1">LeNet手写中文数字样例
+                                        </option>
+                                        <option value="option2">ResNet50毒蘑菇样例
+                                        </option>
+                                        <option value="custom">自定义后端站点地址</option>
+                                    </select>
+                                    <input type="url" class="form-control mt-2" id="inputEndpoint"
+                                           placeholder="ex: http://localhost:65481/api/search" style="display:none;">
+                                    <small id="urlHelp" class="form-text text-muted">使用Restful API与后端服务器通信 </small>
                                 </div>
                             </div>
-                        </form>
-                        <div id="usedModel">
-                            <h4>所用模型</h4>
-                            <p>在昇腾找同款应用样例中，我们使用了如下模型：</p>
-                            LeNet: <a href="https://gitee.com/ascend/modelzoo/tree/master/built-in/MindSpore/Official/cv/image_classification/LeNet_for_MindSpore">访问Ascend/modelzoo下载</br></a>
-                            ResNet50: <a
-                                href="https://gitee.com/ascend/modelzoo/tree/master/built-in/MindSpore/Official/cv/image_classification/ResNet50_for_MindSpore">
-                                访问Ascend/modelzoo下载</a>
-
-                        </div>
-
-                        <div id="queryExample" style="display: none;">
-                            <h4>查询样例</h4>
-                            <p>您可以本地上传或拖动下方的样例图片到右边的界面中查询</p>
-                            <nav>
-                                <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                                    <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab"
-                                        href="#nav-image" role="tab" aria-controls="nav-image"
-                                        aria-selected="true">Images</a>
-                                    <!-- <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab"
-                                    href="#nav-video" role="tab" aria-controls="nav-video"
-                                    aria-selected="false">Videos</a>
-                                <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab"
-                                    href="#nav-audio" role="tab" aria-controls="nav-audio"
-                                    aria-selected="false">Audios</a> -->
+                            <div class="form-group">
+                                <label>Content Type</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="acceptText" checked>
+                                    <label class="form-check-label" for="acceptText">
+                                        Text
+                                    </label>
                                 </div>
-                            </nav>
-                            <div class="tab-content" id="nav-tabContent">
-                                <div class="tab-pane fade show active" id="nav-image" role="tabpanel"
-                                    aria-labelledby="nav-home-tab">
-                                    <div class="example-images">
-                                    </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="acceptImage" checked>
+                                    <label class="form-check-label" for="acceptImage">
+                                        Image
+                                    </label>
                                 </div>
-                                <!-- <div class="tab-pane fade" id="nav-video" role="tabpanel"
-                                aria-labelledby="nav-profile-tab">
-                                <img class="img-thumbnail gif"
-                                    src="https://38.media.tumblr.com/8d59b49aebfd1f7b41e598d7f5b8313f/tumblr_nqk6nm7g6H1tpje2go1_250.gif" />
-                                <img class="img-thumbnail gif"
-                                    src="https://38.media.tumblr.com/6b2a7dc75f542ab1a80a9cede0173665/tumblr_nq1yvjLdcs1uv0y2ro1_250.gif" />
-                                <img class="img-thumbnail gif"
-                                    src="https://38.media.tumblr.com/67cba86efe8ec823c93f43557bfefc82/tumblr_mle651CUqL1rtg76ko1_250.gif" />
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="acceptAudio" checked>
+                                    <label class="form-check-label" for="acceptAudio">
+                                        Audio
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="acceptVideo" checked>
+                                    <label class="form-check-label" for="acceptVideo">
+                                        Video
+                                    </label>
+                                </div>
                             </div>
-                            <div class="tab-pane fade" id="nav-audio" role="tabpanel"
-                                aria-labelledby="nav-contact-tab">
-                                <audio controls src="https://www.w3schools.com/html/horse.ogg" draggable="true"
-                                    ondragstart="handleFileDrag(event)"> Your browser does not support
-                                    the<code>audio</code> element.
-                                </audio>
-                                <audio controls
-                                    src="https://interactive-examples.mdn.mozilla.net/media/examples/t-rex-roar.mp3"
-                                    draggable="true" ondragstart="handleFileDrag(event)">
-                                    Your browser does not support the<code>audio</code> element.
-                                </audio>
-                            </div> -->
+                            <div class="form-group">
+                                <label>Components</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="showSearch" checked>
+                                    <label class="form-check-label" for="showSearch">
+                                        Show searchbar
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="showFloater" checked>
+                                    <label class="form-check-label" for="showFloater">
+                                        Show floater
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Floater Style</label>
+                                <div class="form-check">
+                                    <input class="form-check-input jina-results-select" type="radio"
+                                           name="floaterStyleRadios" id="floaterStandard" value="standard" checked>
+                                    <label class="form-check-label" for="floaterStandard">
+                                        Standard
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input jina-results-select" type="radio"
+                                           name="floaterStyleRadios" id="floaterChatBot" value="chatBot">
+                                    <label class="form-check-label" for="floaterChatBot">
+                                        Chat Bot
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Expanding Dropzone</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="showSearchbarDropzone"
+                                           checked>
+                                    <label class="form-check-label" for="showSearchbarDropzone">
+                                        Searchbar
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="showFloaterDropzone"
+                                           checked>
+                                    <label class="form-check-label" for="showFloaterDropzone">
+                                        Floater
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Searchbar Results</label>
+                                <div class="form-check">
+                                    <input class="form-check-input jina-results-select" type="radio"
+                                           name="resultsRadios" id="resultsDropdown" value="dropdown" checked>
+                                    <label class="form-check-label" for="resultsDropdown">
+                                        Show in Dropdown
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input jina-results-select" type="radio"
+                                           name="resultsRadios" id="resultsComponent" value="resultsArea">
+                                    <label class="form-check-label" for="resultsComponent">
+                                        Show in Results Component
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Color Theme</label>
+                                <div class="form-check">
+                                    <input class="form-check-input jina-theme-select" type="radio"
+                                           name="exampleRadios" id="colorDefault" value="default" checked>
+                                    <label class="form-check-label" for="colorDefault">
+                                        Default
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input jina-theme-select" type="radio"
+                                           name="exampleRadios" id="colorPersian" value="persian">
+                                    <label class="form-check-label" for="colorPersian">
+                                        Persian
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input jina-theme-select" type="radio"
+                                           name="exampleRadios" id="colorPompelmo" value="pompelmo">
+                                    <label class="form-check-label" for="colorPompelmo">
+                                        Pompelmo
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input jina-theme-select" type="radio"
+                                           name="exampleRadios" id="colorHoneybee" value="honeybee">
+                                    <label class="form-check-label" for="colorHoneybee">
+                                        Honeybee
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Typewriter Effect</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="useTypewriter">
+                                    <label class="form-check-label" for="useTypewriter">
+                                        Enable Typewriter Effect
+                                    </label>
+                                </div>
+
                             </div>
                         </div>
+                    </form>
+                    <div id="usedModel">
+                        <h4>所用模型</h4>
+                        <p>在昇腾找同款应用样例中，我们使用了如下模型：</p>
+                        LeNet: <a href="https://gitee.com/ascend/modelzoo/tree/master/built-in/MindSpore/Official/cv/image_classification/LeNet_for_MindSpore">访问Ascend/modelzoo下载</br></a>
+                        ResNet50: <a
+                            href="https://gitee.com/ascend/modelzoo/tree/master/built-in/MindSpore/Official/cv/image_classification/ResNet50_for_MindSpore">
+                        访问Ascend/modelzoo下载</a>
 
                     </div>
-                    <div class="col-8">
+
+                    <div id="queryExample" style="display: none;">
+                        <h4>查询样例</h4>
+                        <p>您可以本地上传或拖动下方的样例图片到右边的界面中查询</p>
                         <nav>
                             <div class="nav nav-tabs" id="nav-tab" role="tablist">
                                 <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab"
-                                    href="#nav-preview" role="tab" aria-controls="nav-image"
-                                    aria-selected="true">Preview</a>
+                                   href="#nav-image" role="tab" aria-controls="nav-image"
+                                   aria-selected="true">Images</a>
+                                <!-- <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab"
+                                href="#nav-video" role="tab" aria-controls="nav-video"
+                                aria-selected="false">Videos</a>
+                            <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab"
+                                href="#nav-audio" role="tab" aria-controls="nav-audio"
+                                aria-selected="false">Audios</a> -->
                             </div>
                         </nav>
                         <div class="tab-content" id="nav-tabContent">
-                            <div class="tab-pane fade show active" id="nav-preview" role="tabpanel">
-                                <div id="browser" style="display: none;">
-                                    <div id="browser-page-name">Your website</div>
-                                    <div id="btns">
-                                        <div class="browser-btn" id="btn-close"></div>
-                                        <div class="browser-btn" id="btn-min"></div>
-                                        <div class="browser-btn" id="btn-max"></div>
+                            <div class="tab-pane fade show active" id="nav-image" role="tabpanel"
+                                 aria-labelledby="nav-home-tab">
+                                <div class="example-images">
+                                </div>
+                            </div>
+                            <!-- <div class="tab-pane fade" id="nav-video" role="tabpanel"
+                            aria-labelledby="nav-profile-tab">
+                            <img class="img-thumbnail gif"
+                                src="https://38.media.tumblr.com/8d59b49aebfd1f7b41e598d7f5b8313f/tumblr_nqk6nm7g6H1tpje2go1_250.gif" />
+                            <img class="img-thumbnail gif"
+                                src="https://38.media.tumblr.com/6b2a7dc75f542ab1a80a9cede0173665/tumblr_nq1yvjLdcs1uv0y2ro1_250.gif" />
+                            <img class="img-thumbnail gif"
+                                src="https://38.media.tumblr.com/67cba86efe8ec823c93f43557bfefc82/tumblr_mle651CUqL1rtg76ko1_250.gif" />
+                        </div>
+                        <div class="tab-pane fade" id="nav-audio" role="tabpanel"
+                            aria-labelledby="nav-contact-tab">
+                            <audio controls src="https://www.w3schools.com/html/horse.ogg" draggable="true"
+                                ondragstart="handleFileDrag(event)"> Your browser does not support
+                                the<code>audio</code> element.
+                            </audio>
+                            <audio controls
+                                src="https://interactive-examples.mdn.mozilla.net/media/examples/t-rex-roar.mp3"
+                                draggable="true" ondragstart="handleFileDrag(event)">
+                                Your browser does not support the<code>audio</code> element.
+                            </audio>
+                        </div> -->
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-8">
+                    <nav>
+                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                            <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab"
+                               href="#nav-preview" role="tab" aria-controls="nav-image"
+                               aria-selected="true">Preview</a>
+                        </div>
+                    </nav>
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="nav-preview" role="tabpanel">
+                            <div id="browser" style="display: none;">
+                                <div id="browser-page-name">Your website</div>
+                                <div id="btns">
+                                    <div class="browser-btn" id="btn-close"></div>
+                                    <div class="browser-btn" id="btn-min"></div>
+                                    <div class="browser-btn" id="btn-max"></div>
+                                </div>
+                                <div id="browser-frame">
+                                    <div class="jina-container">
+                                        <div class="jina-header" id="searchbar-container">
+                                            <jina-searchbar id="main-searchbar" acceptVideo="false"
+                                                            showDropzone="false" />
+                                        </div>
+                                        <div class="jina-content-body" id="results-container">
+                                            <jina-results id="main-results"></jina-results>
+                                        </div>
                                     </div>
-                                    <div id="browser-frame">
-                                        <div class="jina-container">
-                                            <div class="jina-header" id="searchbar-container">
-                                                <jina-searchbar id="main-searchbar" acceptVideo="false"
-                                                    showDropzone="false" />
-                                            </div>
-                                            <div class="jina-content-body" id="results-container">
-                                                <jina-results id="main-results"></jina-results>
-                                            </div>
-                                        </div>
-                                        <div id="floater-container">
-                                            <jina-floater-chat id="main-floater"></jina-floater-chat>
-                                        </div>
+                                    <div id="floater-container">
+                                        <jina-floater-chat id="main-floater"></jina-floater-chat>
                                     </div>
                                 </div>
-                                <div id="canvas-wraper">
-                                    <div class="cavas_desc">
-                                        <p>可在黑色面板中手写单个中文数字，如："一"</p>
-                                    </div>
-                                    <div class="cavas_panel">
-                                        <canvas id="canvas"></canvas>
-                                    </div>
-                                    <div class="btn">
-                                        <button class="cleanBtn" onclick="clean();">重写</button>
-                                        <button class="sendBtn" onclick="send();">查询</button>
-                                    </div>
-                                    <div id="canvas-search-results">
+                            </div>
+                            <div id="canvas-wraper">
+                                <div class="cavas_desc">
+                                    <p>可在黑色面板中手写单个中文数字，如："一"</p>
+                                </div>
+                                <div class="cavas_panel">
+                                    <canvas id="canvas"></canvas>
+                                </div>
+                                <div class="btn">
+                                    <button class="cleanBtn" onclick="clean();">重写</button>
+                                    <button class="sendBtn" onclick="send();">查询</button>
+                                </div>
+                                <div id="canvas-search-results">
 
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -319,24 +318,25 @@
                 </div>
             </div>
         </div>
+    </div>
 
-        <div class="row tab-contents tab-3-content" style="display: none;margin-top: 20px;">
-            <div class="col-10" style="padding: 0;background-color: #fff;padding: 1.2rem;margin-bottom: 1rem;">
-                <div id="showBoxIframeBefore" class="row">
-                    想了解Ascend机器运行信息，可点击下方按钮查询
-                </div>
-                <iframe id="showBoxIframe" style="border-radius:0.25rem;display: none;min-height: 12rem;" src="" frameborder="0" width="100%" height="auto">
-                </iframe>
-                <div class="btn-group" role="group" aria-label="Basic example">
-                    <button type="button" class="btn btn-secondary viewCluster">查看集群</button>
-                    <button type="button" class="btn btn-secondary viewNode">查看节点</button>
-                    <button type="button" class="btn btn-secondary viewPartition">查看分区</button>
-                </div>
+    <div class="row tab-contents tab-3-content" style="display: none;margin-top: 20px;">
+        <div class="col-10" style="padding: 0;background-color: #fff;padding: 1.2rem;margin-bottom: 1rem;">
+            <div id="showBoxIframeBefore" class="row">
+                想了解Ascend机器运行信息，可点击下方按钮查询
             </div>
-            <div class="col-2">
-                <div class="architecture">Architecture</div>
-                <div class="row">
-                    <img src="img/ascend_slurm.png" alt="" srcset="" style="width: 100%;">
+            <iframe id="showBoxIframe" style="border-radius:0.25rem;display: none;min-height: 12rem;" src="" frameborder="0" width="100%" height="auto">
+            </iframe>
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-secondary viewCluster">查看集群</button>
+                <button type="button" class="btn btn-secondary viewNode">查看节点</button>
+                <button type="button" class="btn btn-secondary viewPartition">查看分区</button>
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="architecture">Architecture</div>
+            <div class="row">
+                <img src="img/ascend_slurm.png" alt="" srcset="" style="width: 100%;">
             </div>
         </div>
     </div>
@@ -348,14 +348,14 @@
             <nav>
                 <div class="nav nav-tabs" id="nav-tab" role="tablist">
                     <a class="nav-item nav-link active" data-toggle="tab"
-                       href="#community-vision" role="tab" 
+                       href="#community-vision" role="tab"
                        aria-selected="true">社区愿景</a>
                     <a class="nav-item nav-link"  data-toggle="tab" href="#project-entrance"
                        role="tab" aria-selected="false">项目入口</a>
                     <a class="nav-item nav-link"  data-toggle="tab" href="#community-contribution"
                        role="tab" aria-selected="false">社区贡献</a>
                     <a class="nav-item nav-link"  data-toggle="tab" href="#join-us"
-                       role="tab" aria-selected="false">加入我们</a>                    
+                       role="tab" aria-selected="false">加入我们</a>
                 </div>
             </nav>
             <div class="tab-content" id="nav-tabContent">
@@ -386,51 +386,51 @@
                             <div class="vertical-line second-line"></div>
                             <table>
                                 <thead>
-                                    <tr>
-                                        <th style="width:40%">应用场景</th>
-                                        <th style="width:25%">公开项目</th>
-                                        <th style="width:35%">地址</th>
-                                    </tr>
+                                <tr>
+                                    <th style="width:40%">应用场景</th>
+                                    <th style="width:25%">公开项目</th>
+                                    <th style="width:35%">地址</th>
+                                </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>您准备或已经使用了ModelZoo中的模型或者脚本，或想要向ModelZoo中贡献您的脚本。</br>各类基于昇腾的模型大赛的技术支撑入口</td>
-                                        <td>modelzoo</td>
-                                        <td><a href="https://gitee.com/ascend/modelzoo" target="_blank">https://gitee.com/ascend/modelzoo</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td>您准备将模型脚本迁移到MindSpore框架，并运行到昇腾AI处理器。</td>
-                                        <td>mindspore</td>
-                                        <td><a href="https://gitee.com/mindspore/mindspore" target="_blank">https://gitee.com/mindspore/mindspore</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td>您准备将TensorFlow框架的模型脚本运行到昇腾AI处理器。</td>
-                                        <td>Tensorflow adapter for Ascend</td>
-                                        <td><a href="https://gitee.com/ascend/tensorflow" target="_blank">https://gitee.com/ascend/tensorflow</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td>您准备使用第三方框架模型进行模型转换和推理执行，或者贡献其他框架的对接能力。</td>
-                                        <td>parser</td>
-                                        <td><a href="https://gitee.com/ascend/parser" target="_blank">https://gitee.com/ascend/parser</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td>您准备向昇腾Graph Engine贡献代码，或咨询Graph Engine相关问题</td>
-                                        <td>graphengine</td>
-                                        <td><a href="https://gitee.com/mindspore/graphengine" target="_blank">https://gitee.com/mindspore/graphengine</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td>您准备使用昇腾提供的系列samples，或贡献samples。</td>
-                                        <td>Ascend Samples</td>
-                                        <td><a href="https://gitee.com/ascend/samples" target="_blank">https://gitee.com/ascend/samples</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td>您准备或已经在HPC等大规模计算场景使用了昇腾AI集群，希望简化集群资源管理以及任务调度的相关工作。</td>
-                                        <td>Slurm plugin for Ascend</td>
-                                        <td><a href="https://gitee.com/ascend/slurm-atlas-plugin" target="_blank">https://gitee.com/ascend/slurm-atlas-plugin</a></td>
-                                    </tr>
+                                <tr>
+                                    <td>您准备或已经使用了ModelZoo中的模型或者脚本，或想要向ModelZoo中贡献您的脚本。</br>各类基于昇腾的模型大赛的技术支撑入口</td>
+                                    <td>modelzoo</td>
+                                    <td><a href="https://gitee.com/ascend/modelzoo" target="_blank">https://gitee.com/ascend/modelzoo</a></td>
+                                </tr>
+                                <tr>
+                                    <td>您准备将模型脚本迁移到MindSpore框架，并运行到昇腾AI处理器。</td>
+                                    <td>mindspore</td>
+                                    <td><a href="https://gitee.com/mindspore/mindspore" target="_blank">https://gitee.com/mindspore/mindspore</a></td>
+                                </tr>
+                                <tr>
+                                    <td>您准备将TensorFlow框架的模型脚本运行到昇腾AI处理器。</td>
+                                    <td>Tensorflow adapter for Ascend</td>
+                                    <td><a href="https://gitee.com/ascend/tensorflow" target="_blank">https://gitee.com/ascend/tensorflow</a></td>
+                                </tr>
+                                <tr>
+                                    <td>您准备使用第三方框架模型进行模型转换和推理执行，或者贡献其他框架的对接能力。</td>
+                                    <td>parser</td>
+                                    <td><a href="https://gitee.com/ascend/parser" target="_blank">https://gitee.com/ascend/parser</a></td>
+                                </tr>
+                                <tr>
+                                    <td>您准备向昇腾Graph Engine贡献代码，或咨询Graph Engine相关问题</td>
+                                    <td>graphengine</td>
+                                    <td><a href="https://gitee.com/mindspore/graphengine" target="_blank">https://gitee.com/mindspore/graphengine</a></td>
+                                </tr>
+                                <tr>
+                                    <td>您准备使用昇腾提供的系列samples，或贡献samples。</td>
+                                    <td>Ascend Samples</td>
+                                    <td><a href="https://gitee.com/ascend/samples" target="_blank">https://gitee.com/ascend/samples</a></td>
+                                </tr>
+                                <tr>
+                                    <td>您准备或已经在HPC等大规模计算场景使用了昇腾AI集群，希望简化集群资源管理以及任务调度的相关工作。</td>
+                                    <td>Slurm plugin for Ascend</td>
+                                    <td><a href="https://gitee.com/ascend/slurm-atlas-plugin" target="_blank">https://gitee.com/ascend/slurm-atlas-plugin</a></td>
+                                </tr>
                                 </tbody>
-                            </table> 
-                        </div>                                               
+                            </table>
+                        </div>
                         <div class="project-entrance-bottom">
                             <span class="project-entrance-bottom-tips">Tips: </span>
                             <span class="project-entrance-bottom-tip">若您提issue时无法识别对应的入口项目，可以直接在modelzoo项目中提交Issue，我们会及时处理。</span>
@@ -440,7 +440,7 @@
                 <div class="tab-pane fade show" id="community-contribution" role="tabpanel">
                     <div class="row">
                         <div class="col-3 community-contribution">
-                            <p class="community-contribution-item community-contribution-item-red">通过Issue建立直达Commiter的交流渠道，快速闭环问题和需求。</p> 
+                            <p class="community-contribution-item community-contribution-item-red">通过Issue建立直达Commiter的交流渠道，快速闭环问题和需求。</p>
                         </div>
                         <div class="col-3 community-contribution">
                             <p class="community-contribution-item community-contribution-item-gray">用户基于开放Project自主修改、编译、升级，快速闭环问题。</p>
@@ -483,15 +483,15 @@
                             <div>期间管理员可能会私信咨询您相关信息</div>
                             <div class="link-round link-round9"></div>
                             <div class="link-round link-round10"></div>
-                        </div>                       
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-4">        
-            <div class="architecture">昇腾软件栈</div>    
+        <div class="col-4">
+            <div class="architecture">昇腾软件栈</div>
             <div class="right-content">
-               <div id="right_1_div">AI框架</div>
+                <div id="right_1_div">AI框架</div>
                 <div id="right_2_div">
                     <div id="right_3_div">AscendCL</br>昇腾统一编程语言</div>
                     <div id="right_4_div">Graph Engine</br>昇腾图优化引擎</div>
@@ -507,73 +507,73 @@
                     </div>
                     <span>CANN</span>
                 </div>
-                <div id="right_10_div">操作系统</br>昇腾系列硬件</div>               
-            </div>  
+                <div id="right_10_div">操作系统</br>昇腾系列硬件</div>
+            </div>
             <div id="right_introduction">CANN(Compute Architecture for Neural Networks)是华为全栈全场景AI解决方案中的芯片使能层，位于芯片层之上，AI框架层之下，它提供了高效算子库和高度自动化的神经网络算子开发工具，让开发者能够方便地在昇腾芯片上开发高性能的自定义算子。</div>
         </div>
     </div>
 
-    </div>
+</div>
 
-    <div class="container footer">
-        <div class="row" style="padding:100px 0 20px 0;">
-            <div class="col-8 right-line" style="padding:50px 0px;">
-                <h5 class="row justify-content-center margin-bottom-50">友情链接</h5>
-                <div class="row">
-                    <div class="col-4 right-line">
-                        <div class="row align-items-center">
-                            <img src="img/ascend_logo_footer.png" alt="" srcset="" style="width: 60px;">
-                            <a href="https://ascend.huawei.com/">昇腾计算</a>
-                        </div>
-                    </div>
-                    <div class="col-4 right-line">
-                        <div class="row align-items-center">
-                            <img src="img/ms_logo_footer.png" alt="" srcset="" style="width: 60px;">
-                            <a href="https://www.mindspore.cn/">MindSpore</a>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="row align-items-center">
-                            <img src="img/kungpeng_logo_footer.png" alt="" srcset="" style="width: 60px;">
-                            <a href="https://www.huaweicloud.com/kunpeng/">鲲鹏社区</a>
-                        </div>
+<div class="container footer">
+    <div class="row" style="padding:100px 0 20px 0;">
+        <div class="col-8 right-line" style="padding:50px 0px;">
+            <h5 class="row justify-content-center margin-bottom-50">友情链接</h5>
+            <div class="row">
+                <div class="col-4 right-line">
+                    <div class="row align-items-center">
+                        <img src="img/ascend_logo_footer.png" alt="" srcset="" style="width: 60px;">
+                        <a href="https://ascend.huawei.com/">昇腾计算</a>
                     </div>
                 </div>
-            </div>
-            <div class="col-4" style="padding:50px 0px;">
-                <h5 class="row justify-content-center margin-bottom-50">关注我们</h5>
-                <div class="row justify-content-center">
-                    <div class="col-4">
-                        <div class="row justify-content-center"><img src="img/gitee_logo_footer.png" alt="" srcset=""
-                                style="width: 80px;"></div>
-                        <div class="row justify-content-center">
-                            <a href="https://gitee.com/ascend/playground">代码仓</a>
-                        </div>
+                <div class="col-4 right-line">
+                    <div class="row align-items-center">
+                        <img src="img/ms_logo_footer.png" alt="" srcset="" style="width: 60px;">
+                        <a href="https://www.mindspore.cn/">MindSpore</a>
                     </div>
-                    <div class="col-4">
-
-                        <div class="row justify-content-center"><img src="img/web_logo_footer.png" alt="" srcset=""
-                                style="width: 80px;"></div>
-                        <div class="row justify-content-center">
-                            <a href="http://ascend.gitee.io/playground/">官网</a>
-                        </div>
+                </div>
+                <div class="col-4">
+                    <div class="row align-items-center">
+                        <img src="img/kungpeng_logo_footer.png" alt="" srcset="" style="width: 60px;">
+                        <a href="https://www.huaweicloud.com/kunpeng/">鲲鹏社区</a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row justify-content-center">
-            版权所有@Ascend Open Source Playground
+        <div class="col-4" style="padding:50px 0px;">
+            <h5 class="row justify-content-center margin-bottom-50">关注我们</h5>
+            <div class="row justify-content-center">
+                <div class="col-4">
+                    <div class="row justify-content-center"><img src="img/gitee_logo_footer.png" alt="" srcset=""
+                                                                 style="width: 80px;"></div>
+                    <div class="row justify-content-center">
+                        <a href="https://gitee.com/ascend/playground">代码仓</a>
+                    </div>
+                </div>
+                <div class="col-4">
+
+                    <div class="row justify-content-center"><img src="img/web_logo_footer.png" alt="" srcset=""
+                                                                 style="width: 80px;"></div>
+                    <div class="row justify-content-center">
+                        <a href="http://ascend.gitee.io/playground/">官网</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+    <div class="row justify-content-center">
+        版权所有@Ascend Open Source Playground
+    </div>
+</div>
 
 </body>
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-    crossorigin="anonymous"></script>
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-    crossorigin="anonymous"></script>
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
 <!-- <link rel="stylesheet" href="./src/index.css"> -->
@@ -593,6 +593,16 @@
         $('.tab-contents').css('display', 'none');
         $('.tab-' + (index + 1) + '-content').css('display', 'flex');
     })
+</script>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?10b207bb5db5ac2ae978d5990aa094bd";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
 </script>
 
 </html>
