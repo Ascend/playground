@@ -8,7 +8,7 @@ Ascend open source playground.
 
 ## Acknowledgement
 
-The codebase of Ascend Playground project is borrowed from
-[jinabox.js](https://github.com/jina-ai/jinabox.js), very thanks
-[Jina community](https://github.com/jina-ai) for having offered
+The codebase of the Ascend playground project is borrowed from
+[jinabox.js](https://github.com/jina-ai/jinabox.js). Special thanks go to
+[Jina community](https://github.com/jina-ai) for offering
 a lot of help when implementing this project.
